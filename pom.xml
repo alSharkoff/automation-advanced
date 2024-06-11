@@ -26,6 +26,10 @@
                                 org.uncommons.reportng.JUnitXMLReporter
                             </value>
                         </property>
+                        <properties>
+                            <sonar.organization>alsharkoff</sonar.organization>
+                            <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                        </properties>
                         <configurationParameters>
                             junit.jupiter.extensions.autodetection.enabled = true
                         </configurationParameters>
