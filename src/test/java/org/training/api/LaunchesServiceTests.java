@@ -13,6 +13,7 @@ import org.training.BaseTest;
 import org.training.api.controller.LaunchesController;
 
 import java.util.List;
+import java.util.List;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.*;
