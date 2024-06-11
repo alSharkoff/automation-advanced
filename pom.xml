@@ -67,7 +67,7 @@
         <maven.surefire.plugin.version>2.15</maven.surefire.plugin.version>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
-        <sonar.maven.plugin.version>3.3.0.603</sonar.maven.plugin.version>
+        <sonar.maven.plugin.version>3.10.0.2594</sonar.maven.plugin.version>
         <testng.version>7.9.0</testng.version>
         <testng.reportng.version>1.2.2</testng.reportng.version>
         <owner.version>1.0.8</owner.version>
