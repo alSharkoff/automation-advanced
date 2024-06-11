@@ -26,6 +26,9 @@
                                 org.uncommons.reportng.JUnitXMLReporter
                             </value>
                         </property>
+                        <configurationParameters>
+                            junit.jupiter.extensions.autodetection.enabled = true
+                        </configurationParameters>
                     </properties>
                 </configuration>
             </plugin>
@@ -38,6 +41,19 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar.maven.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sonar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <properties>
@@ -47,6 +63,7 @@
         <maven.surefire.plugin.version>2.15</maven.surefire.plugin.version>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
+        <sonar.maven.plugin.version>3.3.0.603</sonar.maven.plugin.version>
         <testng.version>7.9.0</testng.version>
         <testng.reportng.version>1.2.2</testng.reportng.version>
         <owner.version>1.0.8</owner.version>
@@ -66,6 +83,7 @@
         <cucumber.version>7.16.1</cucumber.version>
         <couchbase.java.client.version>3.6.2</couchbase.java.client.version>
         <webdrivermanager.version>5.8.0</webdrivermanager.version>
+        <reportportal.agent.junit5.version>5.3.0</reportportal.agent.junit5.version>
     </properties>
     <dependencies>
         <dependency>
@@ -188,6 +206,12 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.epam.reportportal</groupId>
+            <artifactId>agent-java-junit5</artifactId>
+            <version>${reportportal.agent.junit5.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
